@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgetstart=self.webpackChunkgetstart||[]).push([[789],{7717:t=>{t.exports=JSON.parse('[{"label":"docker swarm","permalink":"/getstart/docker-swarm/tags/docker-swarm","count":12},{"label":"stack","permalink":"/getstart/docker-swarm/tags/stack","count":9}]')}}]);
