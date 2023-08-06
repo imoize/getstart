@@ -10,13 +10,17 @@ jobs:
     name: Test deployment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJs
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: npm
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
-      - name: Test build website
+
+      - name: Test Build Website
         run: npm run build
