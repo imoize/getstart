@@ -27,6 +27,7 @@
   --ifm-color-primary-lighter: #7fbbff;
   --ifm-color-primary-lightest: #b1d6ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-navbar-background-color: #151516;
 }
 
 /* Background color */
@@ -34,28 +35,20 @@ html[data-theme='dark'] {
   --ifm-background-color: #0d1117;
 }
 
-/* Overwrite default dark theme */
-[data-theme='dark'] {
-  /* --ifm-navbar-background-color: #01030b; */
-  --ifm-navbar-background-color: #151516;
+/* Override default navbar theme dark */
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid var(--ifm-color-gray-800) !important;
+}
 
-  .navbar {
-    border-bottom: 1px solid var(--ifm-color-gray-800);
-  }
-  
-  .footer--dark {
-    --ifm-footer-background-color: #0d1117;
+/* Override default footer theme dark */
+[data-theme='dark'] .footer--dark {
+    --ifm-footer-background-color: #0d1117 !important;
     border-top: 1px solid var(--ifm-color-gray-800);
   }
 
-  .backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module {
-    background-color: #2c8fff ;
-  }
-}
-
-/* Footer color light */
-.footer--dark {
-  --ifm-footer-background-color: #01030b;
+/* Override default back to top btn */
+.backToTopButton_sjWU{
+  background-color: #2c8fff !important;
 }
 
 /* Docs title */
