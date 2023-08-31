@@ -9,7 +9,7 @@ const config = {
   title: 'Imoize Mini Docs',
   tagline: '',
   favicon: 'img/favicon.ico',
-  noIndex: true, // Defaults to `false`
+  noIndex: false, // Defaults to `false`
 
   // Set the production url of your site here
   url: 'https://imoize.github.io',
@@ -57,6 +57,12 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
@@ -64,6 +70,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: 'WFTWSMRD0G',
+        apiKey: '7a7072afd9e3c8ebc005acbc74f8f608',
+        indexName: 'docs_getstart',
+        contextualSearch: true,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -98,7 +110,7 @@ const config = {
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             // GitHub
-            href: 'https://github.com/imoize',
+            href: 'https://github.com/imoize/getstart',
             // label: 'GitHub',
             position: 'right',
             className: 'header-github-link',
