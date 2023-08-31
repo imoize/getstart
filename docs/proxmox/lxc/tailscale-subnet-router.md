@@ -1,5 +1,4 @@
 ---
-id: tail
 title: Tailscale as subnet router inside lxc
 sidebar_label: 'Tailscale Subnet'
 sidebar_position: 1

@@ -1,7 +1,7 @@
 ---
 title: "Proxmox Windows 11 with iGPU Passtrhough"
 sidebar_label: "Windows 11 iGPU Passthrough"
-sidebar_position: 1
+slug: windows11-igpu-passthrough
 tags:
   - ubuntu
   - proxmox

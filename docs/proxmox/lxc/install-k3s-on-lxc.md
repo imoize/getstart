@@ -1,6 +1,6 @@
 ---
-title: Install K3s On Lxc
-sidebar_label: "Install K3s on Lxc"
+title: Install K3s On LXC
+sidebar_label: "K3s on LXC"
 sidebar_position: 3
 keywords:
     - k3s
@@ -41,6 +41,8 @@ wget -qO k3s-lxc.sh https://raw.githubusercontent.com/imoize/boilerplates/master
 ```
 
 ```bash
-chmod +x k3s-lxc.sh
-./k3s-lxc.sh
+sudo chmod +x k3s-lxc.sh
+```
+```bash
+sudo ./k3s-lxc.sh
 ```
