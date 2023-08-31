@@ -1,1 +1,0 @@
-# Install Ubuntu 23.10 on Proxmox VM
