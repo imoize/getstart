@@ -71,9 +71,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: 'WFTWSMRD0G',
-        apiKey: '7a7072afd9e3c8ebc005acbc74f8f608',
-        indexName: 'docs_getstart',
+        appId: 'N7IJ6XT1ID',
+        apiKey: 'e5bc65c5fa223bf84b7f0d9536ef350a',
+        indexName: 'getstart',
         contextualSearch: true,
       },
       // Replace with your project's social card
