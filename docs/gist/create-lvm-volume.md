@@ -154,7 +154,7 @@ resize2fs /dev/vg0/lv_mydata
 ## Reduce capacity 
 Reducing storage space is a less common task, but it's worth noting. The process occurs in the opposite order from expanding storage.
 
-:::danger NOTE
+:::warning
 You can only grow an ext4 filesystem on-line. If you want to shrink it, you will need to unmount it first.
 :::
 

@@ -1,6 +1,7 @@
 ---
 title: Set Fan Offset on Dell Power Edge
-sidebar_label: "Dell PE Fan Offset"
+sidebar_label: "Set Dell PowerEdge Fan Offset"
+slug: "set-fan-offset-on-dell-poweredge"
 tags:
     - server
     - tutorial
@@ -115,7 +116,7 @@ System fan #'s vary per chassis. Fan1 starts on the left side behind the Dell lo
 ### Percentages to Hexadecimal & Fan Speed Table
 
 | Percentage % | Hexadecimal |   RPM   |
-| :----------- |  :------:   |  :----: |
+| :----------: |  :------:   |  :----: |
 |     10%      |     0xA     |
 |     11%      |     0xB     |
 |     12%      |     0xC     |
