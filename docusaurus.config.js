@@ -1,13 +1,14 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Imoize Mini Docs',
-  tagline: '',
+  title: 'Imoize',
+  tagline: 'Hope Right As Rain',
   favicon: 'img/favicon.ico',
   noIndex: false, // Defaults to `false`
 
@@ -40,7 +41,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
+          // routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           lastVersion: 'current',
           onlyIncludeVersions: ['current'],
@@ -79,7 +80,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Home',
+        title: 'Imoize',
         hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
@@ -92,13 +93,14 @@ const config = {
             position: 'left',
             label: 'Docs',
             className: 'docs-title',
+            // activeBaseRegex: `/`,
           },
           {
             to: 'docker-swarm',    // ./docs-api/Intro.md
-            // sidebarId: 'dockerswarm',
+            sidebarId: 'dockerswarm',
             label: 'Docker Swarm',
             position: 'left',
-            activeBaseRegex: `/docker-swarm/`,
+            // activeBaseRegex: `/docker-swarm/`,
           },
           // {
           //   to: 'kubernetes',    // ./docs-api/Intro.md
@@ -107,7 +109,11 @@ const config = {
           //   position: 'left',
           //   activeBaseRegex: `/kubernetes/`,
           // },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   to: '/blog',
+          //   label: 'Blog',
+          //   position: 'left'
+          // },
           {
             // GitHub
             href: 'https://github.com/imoize/getstart',
@@ -115,12 +121,16 @@ const config = {
             position: 'right',
             className: 'header-github-link',
           },
+          // {
+          //   type: 'search',
+          //   position: 'right',
+          // },
         ],
       },
       docs: {
         sidebar: {
           autoCollapseCategories: true,
-          // hideable: true,
+          hideable: true,
         },
       },
       footer: {
@@ -128,8 +138,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Imoize 🚀 . Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        additionalLanguages: ['bash', 'diff', 'json'],
       },
       colorMode: {
         defaultMode: 'dark',
