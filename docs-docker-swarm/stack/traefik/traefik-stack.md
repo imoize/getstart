@@ -110,7 +110,7 @@ entryPoints:
     http:
       redirections:
         entryPoint:
-          to: websecure
+          to: https
           scheme: https
       middlewares:
         - securityHeaders@file
