@@ -16,20 +16,16 @@ tags:
 sudo pacman -S linux-headers broadcom-wl-dkms
 ```
 
-## Blacklist driver
+## Blacklist Drivers
 
 ```bash
-sudo nano /etc/modprobe.d/broadcom-wl-dkms.conf
+sudo nano /etc/modprobe.d/broadcom-wl.conf
 ```
 
 Paste
 ```bash
 blacklist b43
-blacklist b43legacy
-blacklist bcm43xx
 blacklist bcma
-blacklist brcm80211
-blacklist brcmfmac
 blacklist brcmsmac
 blacklist ssb
 ```
@@ -39,7 +35,7 @@ blacklist ssb
 Regenerate the initramfs
 
 ```bash
-sudo mkinitcpio -p
+sudo mkinitcpio -P
 ```
 
 Reboot
