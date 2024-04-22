@@ -106,18 +106,22 @@ sudo nano 2024-04-17_03-56-59_linux.conf
 
 ### Early Loading of NVIDIA Modules
 
+:::warning
+
+To prevent race condition between intel and nvidia, put i915 driver to MODULES array.
+:::
+
 Edit the mkinitcpio configuration file:
 ```bash
 sudo nano /etc/mkinitcpio.conf
 ```
 
-Find the line that says MODULES=()
+Find the line that says MODULES=() update the line to:
+```bash
+MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+```
 
-* Update the line to: MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
-
-Find the line that says HOOKS=()
-
-* On the HOOKS=() line, find the word `kms` inside the parenthesis and remove it
+Find the line that says HOOKS=() and find the word `kms` and remove it
 
 ### Adding the Pacman Hook
 
@@ -184,7 +188,9 @@ Regenerate the initramfs:
 sudo mkinitcpio -P
 ```
 
-Update systemd-boot:
+Optional update systemd-boot:
+
+* mkinitcpio -P alone will update systemd-boot, but anyway
 ```bash
 sudo bootctl update
 ```

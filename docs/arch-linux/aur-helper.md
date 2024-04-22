@@ -23,7 +23,22 @@ Install required packages:
 sudo pacman -S --needed base-devel git
 ```
 
-Clone the AUR helper repo (yay):
+### Paru
+
+```bash
+git clone https://aur.archlinux.org/paru.git
+```
+
+```bash
+cd paru
+```
+
+```bash
+makepkg -si
+```
+
+### Yay
+
 ```bash
 git clone https://aur.archlinux.org/yay.git
 ```
@@ -33,6 +48,10 @@ cd yay
 ```bash
 makepkg -si
 ```
+
+## Enable chaotic-aur
+
+Follow this [link.](https://aur.chaotic.cx/)
 
 ## Enable multilib repository
 
@@ -51,3 +70,11 @@ Update the system package database:
 ```bash
 yay -Syu
 ```
+
+## Reference
+
+[Paru](https://github.com/Morganamilo/paru)
+
+[Yay](https://github.com/Jguer/yay)
+
+[Chaotic AUR](https://aur.chaotic.cx/)

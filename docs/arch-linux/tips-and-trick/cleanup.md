@@ -77,15 +77,24 @@ paccache -ruk0
 
 ## Clean home cache
 
-cache is located in ~/.cache
+Cache is located in
+```bash
+~/.cache
+```
 
 ## Config Files
 
-stored in ~/.config/
+Config file is located in
+```bash
+~/.config
+```
 
 ## Find and remove
 
-install rmlint package sudo pacman -S rm lint.
+Install rmlint package
+```bash
+sudo pacman -S rmlint
+```
 
 ## Reference
 
