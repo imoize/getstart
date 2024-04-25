@@ -81,6 +81,8 @@ Find appropriate .conf file for your Arch Linux boot entry:
 ```bash
 sudo bootctl list --no-pager
 ```
+
+Choose (selected) one:
 ```bash title="Output"
 type: Boot Loader Specification Type #1 (.conf)
 title: Arch Linux (linux) (default) (selected)
@@ -102,7 +104,10 @@ Edit the appropriate .conf file for your Arch Linux boot entry:
 sudo nano 2024-04-17_03-56-59_linux.conf
 ```
 
-* Append `nvidia_drm.modeset=1` and `nvidia_drm.fbdev=1` to the options line
+Append this parameter to the end of `options` line:
+```bash
+nvidia_drm.modeset=1 nvidia_drm.fbdev=1
+```
 
 ### Early Loading of NVIDIA Modules
 
