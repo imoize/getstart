@@ -61,8 +61,9 @@ sudo nano /etc/modprobe.d/nvidia-drm.conf
 Paste
 
 ```bash
-options nvidia_drm modeset=1 fbdev=1
+options nvidia-drm modeset=1 fbdev=1
 ```
+* `nvidia_drm` also can be used.
 
 ### Optional, Setting the Kernel Parameter
 
@@ -106,7 +107,7 @@ sudo nano 2024-04-17_03-56-59_linux.conf
 
 Append this parameter to the end of `options` line:
 ```bash
-nvidia_drm.modeset=1 nvidia_drm.fbdev=1
+nvidia-drm.modeset=1 nvidia-drm.fbdev=1
 ```
 
 ### Early Loading of NVIDIA Modules
@@ -205,7 +206,7 @@ You can now safely reboot and enjoy the proprietary NVIDIA drivers.
 To verify nvidia_drm.modeset=1 was correctly applied after a reboot, execute the following:
 
 ```bash
-cat /sys/module/nvidia_drm/parameters/modeset
+sudo cat /sys/module/nvidia_drm/parameters/modeset
 ```
 Which should now return Y, and not N anymore.
 

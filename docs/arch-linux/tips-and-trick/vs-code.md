@@ -20,7 +20,7 @@ Visual Studio Code uses Electron, see [Wayland#Electron](https://wiki.archlinux.
 
 ### Native file dialog
 
-If using Plasma, by default VS Code opens GTK file dialogs. To fix that, ensure that KDE desktop portal (xdg-desktop-portal-kde) is installed and set the GTK_USE_PORTAL=1 environment variable.
+If using Plasma, by default VS Code opens GTK file dialogs. To fix that, ensure that KDE desktop portal (xdg-desktop-portal-kde) is installed and set the GTK_USE_PORTAL=1 environment variable. also (xdg-desktop-portal-gtk) maybe needed.
 
 Create ~/.config/xdg-desktop-portal directory
 ```bash
