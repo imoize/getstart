@@ -13,7 +13,7 @@ tags:
 # NVIDIA
 
 :::warning
-Enable multilib repo first.
+Enable multilib repo first. [See here](./pkg-helper-repo.md)
 
 Avoid installing the NVIDIA driver through the package provided from the NVIDIA website. Installation through pacman allows upgrading the driver together with the rest of the system.
 :::

@@ -1,8 +1,8 @@
 ---
-title: Install AUR Helper and Enable multilib repository
-sidebar_label: "AUR Helper"
-# sidebar_position: 4
-slug: "install-aur-helper-and-enable-multilib"
+title: Install Package Manager, AUR Helper and Enable multilib repository
+sidebar_label: "Package Manager, Helper and Repo"
+sidebar_position: 2
+slug: "install-pkg-manager-aur-helper-and-enable-multilib"
 tags:
     - arch linux
     - tutorial
@@ -10,18 +10,26 @@ tags:
 # pagination_next: tail
 ---
 
-## Update System
+## Prerequisite
 
+Update System
 ```bash
 sudo pacman -Syu
 ```
-
-## Installation
 
 Install required packages:
 ```bash
 sudo pacman -S --needed base-devel git
 ```
+## Pacman/AUR front end
+
+### Octopi
+
+```bash
+sudo pacman -S octopi
+```
+
+## AUR Helper
 
 ### Paru
 
@@ -68,7 +76,7 @@ Include = /etc/pacman.d/mirrorlist
 
 Update the system package database:
 ```bash
-yay -Syu
+sudo pacman -Syy
 ```
 
 ## Reference
